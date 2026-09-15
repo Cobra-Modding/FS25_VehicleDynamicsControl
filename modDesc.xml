@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="113">
+    <author>Marcus (Cobra Modding)</author>
+    <version>1.0.0.0</version>
+
+    <title>
+        <en>Vehicle Dynamics Control</en>
+        <de>Vehicle Dynamics Control</de>
+    </title>
+
+    <description>
+        <en><![CDATA[
+Wheel-selective ABS, traction control (ASR/TCS) and stability control (ESP/ESC).
+
+Compatibility:
+- Tractor Terrain Dynamics: reads TTD terrain state, moisture, slip and sink data
+- ASR allows expected TTD field slip and intervenes more gently on terrain
+- ABS uses terrain-friendly slip thresholds on TTD fields
+- ESP is suspended only on clearly soft/slippery TTD terrain
+- RealisticBogging runtime compatibility remains active
+- no TTD tire friction, wheel sink, rolling resistance or engine physics are overwritten
+
+HUD:
+- ABS / ASR / ESP use the same centered 20x20 px position above the gear display
+- ASR is green; ABS and ESP are amber
+
+PC/Mac Lua script mod.
+        ]]></en>
+
+        <de><![CDATA[
+Radselektives ABS, Antriebsschlupfregelung (ASR/TCS) und Fahrdynamikregelung (ESP/ESC).
+
+Kompatibilitaet:
+- Tractor Terrain Dynamics: liest TTD-Bodenzustand, Feuchtigkeit, Schlupf und Einsinken
+- ASR toleriert den von TTD vorgesehenen Feldschlupf und regelt im Gelaende weicher
+- ABS nutzt auf TTD-Feldern gelaendetaugliche Schlupfschwellen
+- ESP wird nur auf deutlich weichem/rutschigem TTD-Untergrund ausgesetzt
+- RealisticBogging-Laufzeitkompatibilitaet bleibt erhalten
+- keine TTD-Reifenreibung, kein Einsinken, Rollwiderstand oder Motorphysik werden ueberschrieben
+
+HUD:
+- ABS / ASR / ESP liegen deckungsgleich mittig als 20x20-px-Symbol ueber der Ganganzeige
+- ASR ist gruen; ABS und ESP sind gelb
+
+PC/Mac Lua-Script-Mod.
+        ]]></de>
+    </description>
+
+    <iconFilename>icon_VehicleDynamicsControl.dds</iconFilename>
+	
+    <multiplayer supported="true"/>
+
+    <extraSourceFiles>
+        <sourceFile filename="scripts/VehicleDynamicsControlConfig.lua"/>
+        <sourceFile filename="scripts/VehicleDynamicsControlSystems.lua"/>
+        <sourceFile filename="scripts/VehicleDynamicsControlHUD.lua"/>
+    </extraSourceFiles>
+	
+</modDesc>
